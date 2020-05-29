@@ -1,3 +1,5 @@
 module.exports = {
-    publicPath:'/ecommerce/dist/' 
+    publicPath: process.env.NODE_ENV === 'production'
+    ?'/estore/'
+    :'/' 
 }

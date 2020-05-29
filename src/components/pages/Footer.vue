@@ -15,7 +15,7 @@
     <div class="copy text-center pt-4 pb-5">
       ⓒ Copyright 2020<span> YC </span>All Rights Reserved.
     </div>
-    <div v-scroll-to="'#top'" id="gotop" style="display:none">
+    <div v-scroll-to="'#navBar'" id="gotop" style="display:none">
       <i class="fas fa-chevron-circle-up scroll-icon"></i>
     </div>
     </div>

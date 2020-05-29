@@ -2,7 +2,7 @@
 <div class="home">
 <loading :active.sync="isLoading"></loading>
 <home-navbar/>
-<Carousel id="top"></Carousel>
+<Carousel></Carousel>
 <section>
 <div class="container">
 <h1 class="text-left text-italic">BEST SALE</h1>

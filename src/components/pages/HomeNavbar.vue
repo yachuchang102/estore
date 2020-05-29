@@ -1,21 +1,18 @@
 <template>
   <div class="homeNav">
     <loading :active.sync="isLoading"></loading>
-    <nav class="fixed-top navbar navbar-expand-lg navbar-light py-0 px-sm-5 navbar-fixed-top transparent" id="navBar">
+    <nav class="fixed-top navbar navbar-expand-lg navbar-light py-0 px-sm-5 navbar-fixed-top" id="navBar">
       <div class="d-flex">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <router-link to="/login" class="nav-link text-secondary d-lg-none navbar-icon-size mb-0">
-            <i class="fas fa-user fa-lg"></i>
-        </router-link>
       </div>
 
       <router-link class="navbar-brand" to="/">
       </router-link>
 
-      <ul class="navbar-nav navbar-nav-row order-lg-1">
-        <li class="nav-item d-none d-lg-inline">
+      <ul class="navbar-nav-row navbar-nav order-lg-1">
+        <li class="nav-item d-lg-inline">
           <router-link to="/login" class="nav-link navbar-icon-size mb-0 text-secondary">
             <i class="fas fa-user-circle fa-lg"></i>
           </router-link>
@@ -212,15 +209,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .homeNav {
   font-family: 微軟正黑體
 }
-.navbar {
-    height: 60px
+.navbar-nav-row{
+  flex-direction: row;
+  .nav-link{
+    padding-right:.5rem;
+    padding-left:.5rem;
+  }
 }
 .navbar-fixed-top {
   background: rgba(255,255,255,0.9)
+}
+.navbar-nav li a {
+ line-height: 50px;
 }
 
 .text-dark {
@@ -233,11 +237,11 @@ export default {
 .h-number{
   position:absolute;
   left:20px;
-  top:15px
+  top:30px
 }
 .cart-number{
   position:absolute;
   left:20px;
-  top:15px
+  top:30px
 }
 </style>

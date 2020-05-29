@@ -20,13 +20,17 @@
         <h5 class="card-text text-center">{{item.price | currency}}</h5>
        </div>
 
-    <div class="card card-content bg-primary-opacity text-white card-slideInUp"><!--父-->
-    <div class="card-body align-self-center"><!--子-->
-    <button type="button" class="d-block btn btn-outline-light bt1"
+    <div class="card  card-content bg-primary-opacity text-white card-slideInUp"><!--父-->
+    <div class="card-body"><!--子-->
+    <div class="bt1">
+    <button type="button" class="btn btn-outline-light"
+    style="width: 120px"
      @click="addtoCart(item.id)">加入購物車</button>
-    <button type="button" class="d-block btn btn-outline-light mt-2 bt2"
+    <button type="button" class="btn btn-outline-light mt-1"
+    style="width: 120px"
     @click="goProduct(item.id)"
     >產品詳情</button>
+    </div>
     <i  @click="addFavorite(item.id)"
     v-if="!checkFavStatus(item)"
     class="far fa-heart fa-2x heart-icon"></i>
@@ -194,16 +198,10 @@ export default {
   right:20px;
 }
 .bt1{
-  position: absolute;
-  left:30%;
-  top: 38%;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
   width:120px;
-}
-.bt2{
-  position: absolute;
-  left:30%;
-  top: 50%;
-  width:120px
-
 }
 </style>

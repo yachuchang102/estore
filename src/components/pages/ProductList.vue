@@ -210,6 +210,11 @@ export default {
   position: relative;
   max-width: 95%;
 }
+@media (max-width: 767px) {
+.card-item {
+  margin: auto;
+}
+}
 .product-text {
   font-size: 16px;
   color: #48D1CC;

@@ -85,13 +85,13 @@
               </div>
           </div>
           <hr>
-           <div class="row" v-if="step === 1">
-             <div class="col-md-6">
-               <router-link to="/productlist" class="btn btn-danger step-btn">
+           <div class="row justify-content-between" v-if="step === 1">
+             <div class="col-md-3">
+               <router-link to="/productlist" class="btn btn-danger btn-block step-btn">
                  <i class="fas fa-arrow-left"></i>繼續選購</router-link>
              </div>
-             <div class="col-md-6 text-right" v-if="orderTotal !== 0">
-               <button  class="btn btn-primary step-btn" @click="step = 2">下一步
+             <div class="col-md-3" v-if="orderTotal !== 0">
+                 <button  class="btn btn-primary btn-block step-btn" @click="step = 2">下一步
                  <i class="fas fa-arrow-right"></i></button>
              </div>
           </div>
@@ -99,7 +99,7 @@
       <!-- step2 -->
       <!--訂單-->
 <div class="my-2 row justify-content-center" v-if="step === 2">
-<ValidationObserver class="col-md-6" ref="form">
+<ValidationObserver class="col-md-7" ref="form">
   <form>
     <div class="form-group">
       <label for="useremail">Email</label>
@@ -136,13 +136,13 @@
       <label for="comment">留言</label>
       <textarea name="" id="comment" class="form-control" cols="30" rows="10" v-model="form.message"></textarea>
     </div>
-    <div class="row" v-if="step === 2">
-      <div class="col-md-6">
-        <button  class="btn btn-outline-secondary step-btn" @click="step = 1">
+    <div class="row justify-content-between" v-if="step === 2">
+      <div class="col-md-3">
+        <button  class="btn btn-outline-secondary btn-block step-btn" @click="step = 1">
         <i class="fas fa-arrow-left"></i>上一步</button>
       </div>
-      <div class="col-md-6 text-right">
-        <button  type="button" class="btn btn-primary step-btn"  @click.prevent="createOrder">下一步
+      <div class="col-md-3">
+        <button  type="button" class="btn btn-primary btn-block step-btn"  @click.prevent="createOrder">下一步
         <i class="fas fa-arrow-right"></i></button>
         </div>
       </div>

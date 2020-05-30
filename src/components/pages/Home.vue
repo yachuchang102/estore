@@ -198,7 +198,7 @@ export default {
   right:20px;
 }
 .bt1{
-  position: relative;
+  position: absolute;
   top:50%;
   left:50%;
   transform:translateX(-50%) translateY(-50%);
